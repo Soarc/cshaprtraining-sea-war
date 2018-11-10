@@ -5,10 +5,10 @@ namespace Foundation.Hub256.Seawar
     partial class GameEngine
     {
         /// <summary>
-        /// Check, if ship in position x,y is killed by this hit
+        /// Finds and returns start and end coordinates of ship at position x, y.
         /// </summary>
-        public bool IsDead(Cell[,] field, Coordinates coord)
-        {
+        public bool CheckHit(Cell[,] field, Coordinates coord)
+        {            
             throw new NotImplementedException();            
         }
     }

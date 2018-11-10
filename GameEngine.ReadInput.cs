@@ -4,7 +4,7 @@ namespace Foundation.Hub256.Seawar
 {
     partial class GameEngine
     {
-        public (int x, int y) ReadInput()
+        public Coordinates ReadInput()
         {
             throw new NotImplementedException();            
         }

@@ -5,9 +5,9 @@ namespace Foundation.Hub256.Seawar
     partial class GameEngine
     {
         /// <summary>
-        /// Check, if ship in position x,y is killed by this hit
+        /// Marks ship at position (x1,y1) - (x2,y2) dead and marks surraround cells as hitted sea
         /// </summary>
-        public bool IsDead(Cell[,] field, Coordinates coord)
+        public void MarkDead(Cell[,] field, Ship ship)
         {
             throw new NotImplementedException();            
         }
