@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>cshaprtraining_sea_war</RootNamespace>
+    <RootNamespace>Foundation.Hub256.Seawar</RootNamespace>
   </PropertyGroup>
 
 </Project>

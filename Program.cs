@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cshaprtraining_sea_war
+namespace Foundation.Hub256.Seawar
 {
     class Program
     {
