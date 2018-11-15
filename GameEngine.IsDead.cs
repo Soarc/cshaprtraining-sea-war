@@ -16,19 +16,17 @@ namespace Foundation.Hub256.Seawar
 			if (boat.Orientation == Horizontal)
 				for (int i = boat.Start.X; i <= boat.End.X; i++)
 					if (i != HittedShip)
-						break;
+						return false;
 					else
-						i = DeadShip;
-			else if(boat.Orientation == Vertical)
+						return true;
+			else if (boat.Orientation == Vertical)
 				for (int i = boat.Start.Y; i <= boat.End.Y; i++)
-                    if (i != HittedShip)
-                        break;
-                    else
-                        i = DeadShip;
+					if (i != HittedShip)
+						return false;
+					else
+						return true;
 
-
-
-            throw new NotImplementedException();            
+                       
         }
     }
 }
