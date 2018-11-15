@@ -16,7 +16,7 @@ namespace Foundation.Hub256.Seawar
                 {
                     if (field[ship.Start.X, ship.Start.Y + i] == Cell.Ship
                     || (ship.Start.X+1<10 && field[ship.Start.X+1, ship.Start.Y + i] == Cell.Ship) 
-                    ||(ship.Start.X-1>0 && field[ship.Start.X-1, ship.Start.Y + i] == Cell.Ship) )
+                    ||(ship.Start.X-1>=0 && field[ship.Start.X-1, ship.Start.Y + i] == Cell.Ship) )
                     {
                         return false;
                     }
@@ -27,7 +27,10 @@ namespace Foundation.Hub256.Seawar
                 {
                     if (ship.Orientation == ShipOrientation.Horizontal)
                     {
-                        if (field[ship.Start.X + i, ship.Start.Y] == Cell.Ship)
+                        if (field[ship.Start.X + i, ship.Start.Y] == Cell.Ship
+                        ||(ship.Start.Y+1<10 && field[ship.Start.X+i,ship.Start.Y+1]==Cell.Ship)
+                        ||(ship.Start.Y-1>=0 && field[ship.Start.X+i,ship.Start.Y-1]==Cell.Ship))
+
                         {
                             return false;
                         }
