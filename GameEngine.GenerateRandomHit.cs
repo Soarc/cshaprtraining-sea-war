@@ -9,10 +9,10 @@ namespace Foundation.Hub256.Seawar
         /// </summary>
         public Coordinates GenerateRandomHit(Random random)
         {
-            int a = random.Next(10);
+            
             Coordinates coord=new Coordinates();
-            coord.X=a;
-            coord.Y=a;
+            coord.X=random.Next(10);
+            coord.Y=random.Next(10);
             return  coord;
 
         }
