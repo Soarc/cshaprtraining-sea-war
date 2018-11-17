@@ -9,11 +9,10 @@ namespace Foundation.Hub256.Seawar
         /// </summary>
         public Ship ToCoordinateString(Coordinates coord)
         {
-            char L = (char)(X + 'A');
-            char N = (char)(Y + '1');
-            string Pos = "" + L + N;
+            char L = (char)(coord.X + 'A');
+            char N = (char)(coord.Y + '1');
 
-            return Pos;
+            return "" + L + N;
         }
     }
 }
