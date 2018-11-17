@@ -13,10 +13,10 @@ namespace Foundation.Hub256.Seawar
             bool Corect = false;
             while (!Corect)
             {
-                string a = (string)Console.ReadLine();
-                if (a.Length > 2)
+                string a = Console.ReadLine();
+                if (a.Length > 2 && a.Length < 2)
                 {
-                    Console.WriteLine("oops: mutqagrvac simvolneri qanaky shat e");
+                    Console.WriteLine("oops:entered symbols count I'ts wrong");
                 }
                 else
                 {
@@ -27,22 +27,31 @@ namespace Foundation.Hub256.Seawar
                     //Int32.TryParse(b.ToString(), out int d);
                     Int32.TryParse(c.ToString(), out int e);
 
+                      if (e >= '0' && e <= '9')
 
-                    if ('a' <= b && b <= 'z')
+                      {
+                        if ('a' <= b && b <= 'z')
+                        {
+                            coordinates.Y = b - 'a';
+                            Corect = true;
+                        }
+
+                        else if ('A' <= b && b <= 'Z')
+                        {
+                            coordinates.Y = b - 'A';
+                        }
+
+
+                        coordinates.X = e - 1;
+                        if (Corect)
+                            return coordinates;
+                      }
+                    else
                     {
-                        coordinates.Y = b - 'a';
-                        Corect = true;
+                        Console.WriteLine("oops: The second  symbol must be a number");
                     }
+                
 
-                    else if ('A' <= b && b <= 'Z')
-                    {
-                        coordinates.Y = b - 'A';
-                    }
-
-
-                    coordinates.X = e - 1;
-                    if (Corect)
-                        return coordinates;
                 }
             }
             return default(Coordinates);
