@@ -11,22 +11,22 @@ namespace Foundation.Hub256.Seawar
         {
 			Ship boat;
 			boat = FindShip(field, coord);
-			int q;
+			bool isRip = false;
 
-			if (boat.Orientation == Horizontal)
+			if (boat.Orientation == ShipOrientation.Horizontal)
 				for (int i = boat.Start.X; i <= boat.End.X; i++)
-					if (i != HittedShip)
-						return false;
+					if (field[i, boat.Start.Y] != Cell.HittedShip)
+						break;
 					else
-						return true;
-			else if (boat.Orientation == Vertical)
+						isRip = true;
+			else if (boat.Orientation == ShipOrientation.Vertical)
 				for (int i = boat.Start.Y; i <= boat.End.Y; i++)
-					if (i != HittedShip)
-						return false;
+					if (field[boat.Start.X, i] != Cell.HittedShip)
+						break;
 					else
-						return true;
+						isRip = true;
 
-                       
+                     return isRip;
         }
     }
 }
