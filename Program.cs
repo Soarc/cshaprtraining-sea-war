@@ -32,7 +32,6 @@ namespace Foundation.Hub256.Seawar
                 }
                 Console.WriteLine();
             }
-
         }
     }
 }
