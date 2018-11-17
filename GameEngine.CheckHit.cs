@@ -9,7 +9,7 @@ namespace Foundation.Hub256.Seawar
         /// </summary>
         public bool CheckHit(Cell[,] field, Coordinates coord)
         {            
-            throw new NotImplementedException();            
+            return field[coord.X,coord.Y]==Cell.Ship; 
         }
     }
 }
