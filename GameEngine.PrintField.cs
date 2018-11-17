@@ -10,14 +10,11 @@ namespace Foundation.Hub256.Seawar
         public void PrintField(Cell[,] field)
         {
 
-            string symbol="empty";
+            string symbol = "empty";
             int rowLength = field.GetLength(0);
             int colLength = field.GetLength(1);
 
             Console.WriteLine("  A     B     C     D     E     F     G     H     I     J");
-
-          
-            
 
             for (int i = 0; i < rowLength; i++)
             {
@@ -35,15 +32,15 @@ namespace Foundation.Hub256.Seawar
                     {
                         symbol = "*";
                     }
-                    else if(field[i, j] == Cell.DeadShip)
+                    else if (field[i, j] == Cell.DeadShip)
                     {
                         symbol = "X";
                     }
-                    else if(field[i, j] == Cell.HittedSea)
+                    else if (field[i, j] == Cell.HittedSea)
                     {
                         symbol = "#";
                     }
-                    else if(field[i, j] == Cell.NotShip)
+                    else if (field[i, j] == Cell.NotShip)
                     {
                         symbol = "O";
                     }
@@ -53,6 +50,5 @@ namespace Foundation.Hub256.Seawar
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
         }
-
     }
 }

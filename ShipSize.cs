@@ -1,6 +1,6 @@
 namespace Foundation.Hub256.Seawar
 {
-    enum ShipSize: int 
+    enum ShipSize : int
     {
         Single = 1,
         Double = 2,

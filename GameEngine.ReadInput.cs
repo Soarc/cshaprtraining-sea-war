@@ -19,7 +19,6 @@ namespace Foundation.Hub256.Seawar
                     continue;
                 }
 
-
                 char b = a[0];
                 char c = a[1];
 
