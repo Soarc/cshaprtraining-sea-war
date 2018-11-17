@@ -15,10 +15,10 @@ namespace Foundation.Hub256.Seawar
                 }
             }
             Ship ship = new Ship();
-            ship.Start.X = 5;
+            ship.Start.X = 2;
             ship.Start.Y = 2;
-            ship.End.X = 5;
-            ship.End.Y = 3;
+            ship.End.X = 4;
+            ship.End.Y = 2;
 
             GameEngine g = new GameEngine();
            g.MarkDead(cells, ship);
