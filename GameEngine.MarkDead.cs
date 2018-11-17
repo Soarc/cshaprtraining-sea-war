@@ -42,11 +42,11 @@ namespace Foundation.Hub256.Seawar
                 }
                  if (ship.End.Y + 1 <= 9)
                 {
-                    field[ship.End.Y , ship.End.X] = Cell.NotShip;
+                    field[ship.End.Y +1, ship.End.X] = Cell.NotShip;
  
                     if(ship.End.X - 1 >= 0)
                     {
-                        field[ship.End.Y- 1, ship.End.X + 1] = Cell.NotShip;
+                        field[ship.End.Y+ 1, ship.End.X - 1] = Cell.NotShip;
                     }
                     if(ship.Start.X + 1 <= 9)
                     {
@@ -111,45 +111,3 @@ namespace Foundation.Hub256.Seawar
 }
 
 
-// int i = ship.Start.Y; 
-
-//                 for (int j = ship.Start.X; j <= ship.End.X; j++)
-//                 {
-//                     field[i, j] = Cell.DeadShip;
-//                     if (i > 0)
-//                     {
-//                         field[i - 1, j] = Cell.NotShip;
-//                     }
-//                     if (i < 9)
-//                     {
-//                         field[i + 1, j] = Cell.NotShip;
-//                     }
-
-//                 }
-//                 if (ship.Start.X - 1 >= 0)
-//                 {
-//                     field[ship.Start.Y, ship.Start.X - 1] = Cell.NotShip;
-
-//                     if (ship.Start.Y - 1 >= 0)
-//                     {
-//                         field[ship.Start.Y - 1, ship.Start.X - 1] = Cell.NotShip;
-//                     }
-//                     if (ship.Start.Y + 1 <= 9)
-//                     {
-//                         field[ship.Start.Y + 1, ship.Start.X - 1] = Cell.NotShip;
-//                     }
-//                 }
-//                 if (ship.End.X + 1 <= 9)
-//                 {
-//                     field[ship.End.Y, ship.End.X + 1] = Cell.NotShip;
-
-//                     if (ship.End.Y - 1 >= 0)
-//                     {
-//                         field[ship.End.Y - 1, ship.End.X + 1] = Cell.NotShip;
-//                     }
-//                     if (ship.Start.Y + 1 <= 9)
-//                     {
-//                         field[ship.End.Y + 1, ship.End.X + 1] = Cell.NotShip;
-//                     }
-//                 }
-//             }
