@@ -7,9 +7,13 @@ namespace Foundation.Hub256.Seawar
         /// <summary>
         /// Finds and returns start and end coordinates of ship at position x, y.
         /// </summary>
-        public Ship ToCoordinateString(Cell[,] field, Coordinates coord)
+        public Ship ToCoordinateString(Coordinates coord)
         {
-            throw new NotImplementedException();
+            char L = (char)(X + 'A');
+            char N = (char)(Y + '1');
+            string Pos = "" + L + N;
+
+            return Pos;
         }
     }
 }
