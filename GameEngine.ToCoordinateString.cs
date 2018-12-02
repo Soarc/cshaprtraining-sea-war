@@ -7,7 +7,7 @@ namespace Foundation.Hub256.Seawar
         /// <summary>
         /// Finds and returns start and end coordinates of ship at position x, y.
         /// </summary>
-        public Ship ToCoordinateString(Coordinates coord)
+        public string ToCoordinateString(Coordinates coord)
         {
             char L = (char)(coord.X + 'A');
             char N = (char)(coord.Y + '1');
